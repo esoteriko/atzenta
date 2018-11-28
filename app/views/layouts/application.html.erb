@@ -9,6 +9,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
   </head>
+  <header>
+  <%= react_component("Header", { variable: "Header" }) %>
+  </header>
 
   <body>
     <%= yield %>

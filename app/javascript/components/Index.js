@@ -12,8 +12,11 @@ class Index extends React.Component {
     this.setState({name: "no"});
   }
   render () {
+    const style  = {
+      margin: 0
+    }
     return (
-    	<div>
+    	<div style={style}>
     	<h2>clickea</h2>
         <button onClick={this.method}>accion</button>
         <h2>{this.state.name}</h2>
