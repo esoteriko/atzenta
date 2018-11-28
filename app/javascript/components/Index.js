@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 class Index extends React.Component {
-  constructor(props){
+  constructor(props){ 
     super(props);
     this.state = {
-      name: "si"
+      name: this.props.junta
     };
     this.method = this.method.bind(this)
   }
@@ -14,7 +14,7 @@ class Index extends React.Component {
   render () {
     return (
     	<div>
-    	<h1>Estoy en Rails y uso React UuU</h1>
+    	<h2>clickea</h2>
         <button onClick={this.method}>accion</button>
         <h2>{this.state.name}</h2>
       
