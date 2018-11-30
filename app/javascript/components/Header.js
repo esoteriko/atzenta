@@ -9,7 +9,7 @@ class Header extends React.Component{
     render(){    
         return( 
                 <header className="header">                                    
-                    <img src={"<%= image_tag 'logo.png' %>"} className="logo" />
+                    
                     <div className="header-right">
                         <a href="" className="active">Todas las juntas</a>
                         <a href="" className="active">Programar Junta</a>
@@ -26,3 +26,5 @@ Header.propTypes = {
 
 
 export default Header
+
+//<img src={"<%= image_tag 'logo.png' %>"} className="logo" />
