@@ -7,7 +7,7 @@ class Index extends React.Component {
       name: this.props.junta,
       validate: false,      
     };
-    this.method = this.method.bind(this)
+    this.method = this.method.bind(this);
   }
   method() {
     if(this.state.validate == false){
@@ -24,8 +24,8 @@ class Index extends React.Component {
     	<div>
     	<h2>clickea</h2>
         <button onClick={this.method}>accion</button>
-        <h2>{this.state.name}</h2>
-      
+        <h2>{this.state.name}</h2>         
+        <br/>              
       </div>
 
     );

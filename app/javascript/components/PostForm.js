@@ -4,22 +4,22 @@ class PostForm extends React.component{
 constructor(props){
     super(props);
     this.state = {
-        title: props.article.title,
-        content: props.article.body,
-        var: props.article.var
+        title: this.props.article.title,
+        content: this.props.article.body,
+        var: this.props.article.var
     };
     this.methodT = this.methodT.bind(this);
     this.methodB = this.methodB.bind(this);
     this.methodV = this.methodV.bind(this);
 }
-methodT(e){
-    this.setState({title: e.target.value});
+methodT(event){
+    this.setState({title: event.target.value});
 }
 methodB(e){
-    this.setState({body: e.targer.value});
+    this.setState({body: event.target.value});
 }
-methodV(){
-    this.setState({var: e.target.value});
+methodV(e){
+    this.setState({var: event.target.value});
 }
 render(){
     return(
@@ -36,4 +36,5 @@ render(){
         </div>
     );
 }
+
 }

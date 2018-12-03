@@ -1,4 +1,4 @@
 <h1>New Article</h1>
-<%= form_with(model: @article, local: true) do |form| %>
-    <%= react_component('PostForm', {article: @article}) %>
-  <% end %>
+<%= form_with(model: @article, local: true) do |form|%>
+<%= react_component "PostForm", {article: @article}%>
+<% end %>
