@@ -4,9 +4,9 @@ class PostForm extends React.component{
 constructor(props){
     super(props);
     this.state = {
-        title: this.props.article.title,
-        content: this.props.article.body,
-        var: this.props.article.var
+        title: props.article.title,
+        content: props.article.body,
+        var: props.article.var
     };
     this.methodT = this.methodT.bind(this);
     this.methodB = this.methodB.bind(this);
@@ -15,10 +15,10 @@ constructor(props){
 methodT(event){
     this.setState({title: event.target.value});
 }
-methodB(e){
+methodB(event){
     this.setState({body: event.target.value});
 }
-methodV(e){
+methodV(event){
     this.setState({var: event.target.value});
 }
 render(){
@@ -32,9 +32,11 @@ render(){
             <br/>
             <h2>Var</h2>
             <input type="text" name="article[var]" value={this.state.var} onChange={this.methodV}/>
-            <input tyoe="submit" value="Update Post"/>
+            <input type="submit" value="Update Post"/>
         </div>
     );
 }
 
 }
+
+export default PostForm
