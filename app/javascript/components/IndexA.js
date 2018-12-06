@@ -9,15 +9,20 @@ class IndexA extends React.Component{
     render(){
         return(
             <div>
-                <h1>Articles</h1>
-                {this.props.article.map((article)  => {
-                    return(
-                        <div>
-                        <h3>{article.title}</h3>
-                        <p>{article.body}</p>
-                        <p>{article.var}</p>
-                        </div>
-                    )
+             <h1 className="titulo">Articles</h1>
+             {this.props.article.map((article)  => {
+							 return(
+							 <div>
+								 <table>
+									 <tr>
+									 <th>Titulo:</th> <th>Cuerpo:</th> <th>Var:</th>
+									 </tr>
+									 <tr>
+									 <td>{article.title}</td><td>{article.body}</td><td>{article.var}</td>
+									 </tr>									 
+									</table>
+                </div>										
+                )
                 })}
             </div>
         );
@@ -27,3 +32,4 @@ IndexA.propTypes = {
     variable : PropTypes.string
 }
 export default IndexA
+
