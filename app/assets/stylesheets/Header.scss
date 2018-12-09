@@ -22,16 +22,16 @@
 
   .header a:hover {
     background-color: #bfc7d3;
-    color: #2b2e36;
+    color: black;
   }
 
   .header-right {
     float: right;
   }
-  h1.date{
-    color: red;
+  h2.date{
+    color: #2b2e36;
     position: relative;
-    left: 1060px;
+    left: 960px;
   }
 
   @media screen and (max-width: 500px) {
