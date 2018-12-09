@@ -21,8 +21,7 @@ class IndexA extends React.Component{
 									 <td>{article.title}</td><td>{article.body}</td><td>{article.var}</td>
 									 </tr>									 
 									</table>
-                </div>										
-                )
+                </div>										                )
                 })}
             </div>
         );

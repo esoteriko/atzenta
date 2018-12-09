@@ -6,7 +6,7 @@
 
   .header a {
     float: left;
-    color: black;
+    color: white;
     text-align: center;
     padding: 12px;
     text-decoration: none;
@@ -21,16 +21,17 @@
   }
 
   .header a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  .header a.active {
-    background-color: dodgerblue;
-    color: white;
+    background-color: #bfc7d3;
+    color: #2b2e36;
   }
 
   .header-right {
     float: right;
+  }
+  h1.date{
+    color: red;
+    position: relative;
+    left: 1060px;
   }
 
   @media screen and (max-width: 500px) {
