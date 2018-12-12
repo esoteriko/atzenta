@@ -22,15 +22,31 @@
 
   .header a:hover {
     background-color: #bfc7d3;
-    color: #2b2e36;
+    color: black;
   }
 
   .header-right {
     float: right;
   }
+<<<<<<< HEAD
   h1.fecha{
     color: #2b2e36;
     float: right;
+=======
+  h2.date{
+    color: #2b2e36;
+    text-align: right;
+    margin-right: 10px
+  }
+  div.container{
+    text-align: center;
+    background-color: #efeff0;
+    margin-left: 90px;
+    margin-right: 90px;
+    border: 1.5px solid black;
+    box-shadow: 5px 5px 18px #888888;
+
+>>>>>>> b7840b40361c8f899c12b72cb768206225f37156
   }
 
  
