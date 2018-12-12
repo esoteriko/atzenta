@@ -7,9 +7,10 @@ class Header extends React.Component{
     }
     render(){    
         return( 
-           <div className="header">                                                        
+           <div className="header">  
+           <a><img src={"<%= image_tag 'logo.png', :alt => 'rss feed' %>"}/></a>                                                      
              <div className="header-right">
-							 <a><img src={"<%= image_tag 'logo.png', :alt => 'rss feed' %>"}/></a>
+							 
                <a href="" className="active">Todas las juntas</a>
                <a href="" className="active">Programar Junta</a>
                <a href="" className="active">Home</a>

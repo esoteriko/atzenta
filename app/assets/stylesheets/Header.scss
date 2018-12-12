@@ -28,19 +28,9 @@
   .header-right {
     float: right;
   }
-  h1.date{
-    color: red;
-    position: relative;
-    left: 1060px;
+  h1.fecha{
+    color: #2b2e36;
+    float: right;
   }
 
-  @media screen and (max-width: 500px) {
-    .header a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .header-right {
-      float: none;
-    }
-  }
+ 
