@@ -7,9 +7,9 @@ class IndexW extends React.Component {
     render(){
         return(
             <div className="container">
-            <h1>Juntas</h1>
+            <h1 className="h">Juntas</h1>
             <div>
-                <h2>Juntas programadas</h2>
+                <h2 className="h">Juntas programadas</h2>            
             </div>
             </div>
         );

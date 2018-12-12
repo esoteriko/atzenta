@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react"
 import PropTypes from "prop-types"
 
@@ -40,4 +38,3 @@ Index.propTypes = {
 };
 
 export default Index
->>>>>>> b7840b40361c8f899c12b72cb768206225f37156
