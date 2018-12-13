@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+
 class Header extends React.Component{
     constructor(props){
         super(props);
@@ -8,8 +9,9 @@ class Header extends React.Component{
     render(){    
         return( 
            <div className="header">
-           <img src="assets/logo.png" className="img"/>
+           <img src="assets/logo.png" className="img"/>           
              <div className="header-right">
+               
                <a href={this.props.link} className="active">Todas las juntas</a>
                <a href="" className="active">Programar Junta</a>
                <a href="" className="active">Home</a>
