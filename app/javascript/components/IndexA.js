@@ -11,7 +11,7 @@ class IndexA extends React.Component{
 					<h1 className="h">Articles</h1>
 					{this.props.article.map((article)  => {
 						return(
-							<div>
+							<div>								
 								 <table>
 									 <tr>
 									 <th>Titulo:</th> <th>Cuerpo:</th> <th>Var:</th>
