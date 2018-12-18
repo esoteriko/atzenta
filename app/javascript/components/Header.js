@@ -9,7 +9,7 @@ class Header extends React.Component{
     render(){    
         return( 
            <div className="header">
-           <img src="assets/logo.png" className="img"/>           
+           <img src="/img/logo.png" className="img"/>           
              <div className="header-right">
                
                <a href={this.props.link} className="active">Todas las juntas</a>

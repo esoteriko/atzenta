@@ -3,10 +3,7 @@ import React from "react"
 class PostForm extends React.component{
 constructor(props){
     super(props);
-    this.state = {
-        title: props.article.title,
-        content: props.article.body,
-        var: props.article.var
+    this.state = {    
     };
     this.methodT = this.methodT.bind(this);
     this.methodB = this.methodB.bind(this);
@@ -32,7 +29,7 @@ render(){
             <br/>
             <h2>Var</h2>
             <input type="text" name="article[var]" value={this.state.var} onChange={this.methodV}/>
-            <input type="submit" value="Update Post"/>
+            <input type="submit" value="Update Post"/>            
         </div>
     );
 }

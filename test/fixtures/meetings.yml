@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  body: MyString
+  schedule_date: 2018-12-18 17:02:27
+  purpose: MyString
+
+two:
+  title: MyString
+  body: MyString
+  schedule_date: 2018-12-18 17:02:27
+  purpose: MyString
