@@ -7,6 +7,7 @@ class CreateMeetings < ActiveRecord::Migration[5.2]
       t.string :purpose
       t.integer :duration
       t.time :start_time
+      t.references :follow_up, foreign_key: true
 
       t.timestamps
     end

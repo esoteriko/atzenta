@@ -10,12 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_19_192329) do
+ActiveRecord::Schema.define(version: 2018_12_19_222223) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.string "body"
     t.string "var"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "follow_ups", force: :cascade do |t|
+    t.string "body"
+    t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -27,8 +34,10 @@ ActiveRecord::Schema.define(version: 2018_12_19_192329) do
     t.string "purpose"
     t.integer "duration"
     t.time "start_time"
+    t.integer "follow_up_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["follow_up_id"], name: "index_meetings_on_follow_up_id"
   end
 
 end

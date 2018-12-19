@@ -1,5 +1,8 @@
 <%= form_with(model: @meeting, local: true) do |form|%>
-<%=react_component("Form", {meeting: @meeting})%>
+<%=react_component("FormMeeting", {meeting: @meeting})%>
+<%= form.fields_for(:follow_ups) do |form|%>
+  <%=react_component("FormFollow", {follow_up: @follow_up})%>
+<%end%>
 <%end%>
 
 <%= link_to 'Back', meetings_path %>

@@ -1,0 +1,5 @@
+<%= form_with(model: @follow_up, local: true) do |form|%>
+<%= react_component("FormFollow", {follow_up: @follow_up})%>
+<%end%>
+
+<%= link_to 'Back', follow_ups_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Follow Ups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Body</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @follow_ups.each do |follow_up| %>
+      <tr>
+        <td><%= follow_up.body %></td>
+        <td><%= follow_up.date %></td>
+        <td><%= link_to 'Show', follow_up %></td>
+        <td><%= link_to 'Edit', edit_follow_up_path(follow_up) %></td>
+        <td><%= link_to 'Destroy', follow_up, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Follow Up', new_follow_up_path %>
