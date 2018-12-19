@@ -1,3 +1,3 @@
 class FollowUp < ApplicationRecord
-  has_many :meetings  
+  belongs_to :meeting  
 end
