@@ -3,11 +3,15 @@
 one:
   title: MyString
   body: MyString
-  schedule_date: 2018-12-18 17:02:27
+  schedule_date: 2018-12-19
   purpose: MyString
+  duration: 1
+  start_time: 2018-12-19 13:23:29
 
 two:
   title: MyString
   body: MyString
-  schedule_date: 2018-12-18 17:02:27
+  schedule_date: 2018-12-19
   purpose: MyString
+  duration: 1
+  start_time: 2018-12-19 13:23:29

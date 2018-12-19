@@ -15,8 +15,10 @@ class MeetingsTest < ApplicationSystemTestCase
     click_on "New Meeting"
 
     fill_in "Body", with: @meeting.body
+    fill_in "Duration", with: @meeting.duration
     fill_in "Purpose", with: @meeting.purpose
     fill_in "Schedule Date", with: @meeting.schedule_date
+    fill_in "Start Time", with: @meeting.start_time
     fill_in "Title", with: @meeting.title
     click_on "Create Meeting"
 
@@ -29,8 +31,10 @@ class MeetingsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Body", with: @meeting.body
+    fill_in "Duration", with: @meeting.duration
     fill_in "Purpose", with: @meeting.purpose
     fill_in "Schedule Date", with: @meeting.schedule_date
+    fill_in "Start Time", with: @meeting.start_time
     fill_in "Title", with: @meeting.title
     click_on "Update Meeting"
 

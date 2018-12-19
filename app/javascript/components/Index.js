@@ -3,29 +3,21 @@ import PropTypes from "prop-types"
 
 class Index extends React.Component {
   constructor(props){ 
-    super(props);
-    this.state = {
-      name: this.props.junta,
-      validate: false,  
-    };
-    this.method = this.method.bind(this);
-  }
-  method() {
-    if(this.state.validate == false){
-    this.setState({name: "UwU"});
-    this.setState({validate: true});
-    }
-    else{
-      this.setState({name: "UnU"});
-      this.setState({validate: false});
-    }
+    super(props);      
   }
   render () {
     return (
     	<div>
-    	<h2>clickea</h2>
-        <button onClick={this.method}>accion</button>
-        <h2>{this.state.name}</h2>         
+    	<h1 className="h">Juntas</h1>
+      {this.props.meeting.map((m) => {
+        return(
+          <div className="container">
+            <p>titulo: {m.title}</p><p>body: {m.body}</p><p>date: {m.schedule_date}</p>
+            <p>resolucion: {m.purpose}</p><p>duracion: {m.duration}hrs</p>
+            <p>hora de inicio: {m.start_time}</p>
+            </div>
+        )
+      })}                       
         <br/>  
       </div>
 

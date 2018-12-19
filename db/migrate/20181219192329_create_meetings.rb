@@ -3,8 +3,10 @@ class CreateMeetings < ActiveRecord::Migration[5.2]
     create_table :meetings do |t|
       t.string :title
       t.string :body
-      t.datetime :schedule_date
+      t.date :schedule_date
       t.string :purpose
+      t.integer :duration
+      t.time :start_time
 
       t.timestamps
     end
