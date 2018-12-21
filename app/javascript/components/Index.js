@@ -15,6 +15,11 @@ class Index extends React.Component {
             <p>titulo: {m.title}</p><p>body: {m.body}</p><p>date: {m.schedule_date}</p>
             <p>resolucion: {m.purpose}</p><p>duracion: {m.duration}hrs</p>
             <p>hora de inicio: {m.start_time}</p>
+            <p>{m.follow_ups.map((f) => {
+              return(
+                <div>{f.body}</div>
+              );
+            })}</p>
             </div>
         )
       })}                       

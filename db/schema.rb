@@ -23,8 +23,10 @@ ActiveRecord::Schema.define(version: 2018_12_19_222223) do
   create_table "follow_ups", force: :cascade do |t|
     t.string "body"
     t.date "date"
+    t.integer "meeting_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["meeting_id"], name: "index_follow_ups_on_meeting_id"
   end
 
   create_table "meetings", force: :cascade do |t|
@@ -34,10 +36,8 @@ ActiveRecord::Schema.define(version: 2018_12_19_222223) do
     t.string "purpose"
     t.integer "duration"
     t.time "start_time"
-    t.integer "follow_up_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["follow_up_id"], name: "index_meetings_on_follow_up_id"
   end
 
 end

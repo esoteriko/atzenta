@@ -47,7 +47,8 @@ class FormMeeting extends React.Component {
 					<input type="date" name="meetinf[schedule_date]" value={this.state.schedule_date} onChange={this.methodS}/> 
 					<input type="text" name="meeting[purpose]"value={this.state.purpose} onChange={this.methodP}/>
 					<input type="number" name="meeting[duration]" value={this.state.duration} onChange={this.methodD}/>
-					<input type="time" name="meeting[start_time]" value={this.state.start_time} onChange={this.methodT}/>                           					
+					<input type="time" name="meeting[start_time]" value={this.state.start_time} onChange={this.methodT}/> 
+					                          					
             </div>
         </div>
         );

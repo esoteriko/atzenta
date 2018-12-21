@@ -1,9 +1,11 @@
 <%= form_with(model: @meeting, local: true) do |form|%>
-<%=react_component("FormMeeting", {meeting: @meeting})%>
-<%= form.fields_for(:follow_ups) do |form|%>
-  <%= form.text_field :body%>
-  <%= form.date_field :date%>
-<%end%>
+  <%=react_component("FormMeeting", {meeting: @meeting})%>
+  <%= form.fields_for :follows_ups do |form|%>
+    <%= form.text_field :body%>
+    <%= form.date_select :date %>
+  <%end%>
+  <%=form.submit "save"%>
 <%end%>
 
 <%= link_to 'Back', meetings_path %>
+ 

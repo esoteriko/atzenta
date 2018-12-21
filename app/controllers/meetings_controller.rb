@@ -11,6 +11,7 @@ class MeetingsController < ApplicationController
   # GET /meetings/new
   def new
     @meeting = Meeting.new
+    @meeting.follow_ups.build
   end
 
   # GET /meetings/1/edit

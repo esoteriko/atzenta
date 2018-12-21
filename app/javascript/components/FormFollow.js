@@ -18,15 +18,12 @@ class FormFollow extends React.Component {
   } 	 	
 
     render(){
-        return(
-				<div className="container">
-            <h1 className="h">Juntas</h1>
-						<div>					          					
+        return(				
+				<div>					          					
 					<input type="text" name="follow_up[body]" value={this.state.body} onChange={this.methodB}/>
 					<input type="date" name="follow_up[date]" value={this.state.date} onChange={this.methodD}/> 					
-          <input type="submit" value="Update Post" />										
-            </div>
-        </div>
+          										
+        </div>        
         );
     }
 }

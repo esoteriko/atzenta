@@ -30,5 +30,16 @@
   <%= @meeting.start_time %>
 </p>
 
+<p>
+  <strong>Start time:</strong>
+  <% if @meeting.follow_ups.any? %>  
+    <% @meeting.follow_ups.each do |result|%>
+      <%= link_to result, result%>
+      <%end%>
+      <%else%>
+      <p>RIP</p>
+    <%end%>
+</p>
+
 <%= link_to 'Edit', edit_meeting_path(@meeting) %> |
 <%= link_to 'Back', meetings_path %>
