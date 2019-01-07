@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   
+  devise_for :users 
+    resources :meetings
   resources :follow_ups
-  resources :meetings
   get 'welcome/index'  
   root 'meetings#index'
   

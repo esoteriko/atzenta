@@ -5,6 +5,7 @@ ruby '2.5.1'
 
 gem 'webpacker'
 gem 'react-rails'
+gem 'devise'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
