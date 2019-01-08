@@ -9,7 +9,7 @@ class LinkLogin extends React.Component {
     return (
     	<div>
         <a href={this.props.url+"/sign_up"}>Registrarse</a>|    	            
-        <a href={this.props.url+"/sign_in"}> Iniciar Secion</a>  
+        <a href={this.props.url+"/sign_in"}> Iniciar Sesion</a>  
       </div>
 
     );

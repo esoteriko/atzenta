@@ -1,6 +1,6 @@
 class FollowUpsController < ApplicationController
   before_action :set_follow_up, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /follow_ups
   # GET /follow_ups.json
   def index
