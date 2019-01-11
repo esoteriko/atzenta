@@ -3,7 +3,7 @@ class MeetingsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @meetings = Meeting.all
+    @meetings = Meeting.order(schedule_date: :asc)
   end
   
   def show

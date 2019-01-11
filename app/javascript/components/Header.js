@@ -23,9 +23,9 @@ class Header extends React.Component{
            <div className="header">
            <img src="/img/logo.png" className="img"/>           
 						 <div className="header-right">
-						 {salir} {registrar}{iniciar_sesion}             
+						 {salir}{registrar}{iniciar_sesion}             
                <a href={this.props.link} className="active">Todas las juntas</a>
-               <a href="" className="active">Programar Junta</a>
+               <a href={this.props.link + "/new"} className="active">Programar Junta</a>
                <a href="" className="active">Home</a>
               </div>
             </div>
