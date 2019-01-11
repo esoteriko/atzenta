@@ -12,7 +12,10 @@
   <%= react_component("Header", { variable: "Header", link: "/meetings", url: "/users", email: current_user,user_signed_in: user_signed_in?}) %>
   </header>
   <body>
-  <%= react_component "Fecha"%>  
+  <% if user_signed_in?%>  
+  <%= react_component ("Fecha" )%>
+  <%=current_user.email%>  
+  <%end%>
   <p id="notice"><%=notice%></p> 
   <p class="alert"><%= alert%></p>   
   <%= yield %>
