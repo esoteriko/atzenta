@@ -4,24 +4,17 @@
     <title>Atzenta</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
   </head>
   <header>
-  <%= react_component("Header", { variable: "Header", link: "/articles"  }) %>
+  <%= react_component("Header", { variable: "Header", link: "/articles", url: "/users", email: current_user,user_signed_in: user_signed_in?}) %>
   </header>
-
   <body>
   <%= react_component "Fecha"%>  
   <p id="notice"><%=notice%></p> 
-  <p class="alert"><%= alert%></p>
-  <%if user_signed_in?%>
-  <%=react_component("Session", {email: current_user.email, url: "/users"})%>  
-<% else %>  
-  <%=react_component("LinkLogin", {url: "/users"})%>
-<% end %>   
+  <p class="alert"><%= alert%></p>   
   <%= yield %>
   </body>
 </html>

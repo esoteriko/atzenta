@@ -11,7 +11,7 @@ class Index extends React.Component {
     	<h1 className="h">Juntas</h1>
       {this.props.meeting.map((m) => {
         return(
-          <div className="container">
+          <div className="container" key={m.id}>
             <p>titulo: {m.title}</p><p>body: {m.body}</p><p>date: {m.schedule_date}</p>
             <p>resolucion: {m.purpose}</p><p>duracion: {m.duration}hrs</p>
             <p>hora de inicio: {m.start_time}</p>
