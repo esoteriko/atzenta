@@ -7,6 +7,7 @@
     <tr>
       <th>Body</th>
       <th>Date</th>
+      <th>Id</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= follow_up.body %></td>
         <td><%= follow_up.date %></td>
+        <td><%= follow_up.meeting.id %></td>
         <td><%= link_to 'Show', follow_up %></td>
         <td><%= link_to 'Edit', edit_follow_up_path(follow_up) %></td>
         <td><%= link_to 'Destroy', follow_up, method: :delete, data: { confirm: 'Are you sure?' } %></td>
