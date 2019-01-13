@@ -6,13 +6,18 @@
 </p>
 
 <p>
+  <strong>User:</strong>
+  <%= @meeting.user.email %>
+</p>
+
+<p>
   <strong>Body:</strong>
   <%= @meeting.body %>
 </p>
 
 <p>
   <strong>Schedule date:</strong>
-  <%= @meeting.schedule_date %>
+  <%= @meeting.schedule_date.year %>|<%= @meeting.schedule_date.month %>|<%= @meeting.schedule_date.day %>
 </p>
 
 <p>
@@ -27,7 +32,7 @@
 
 <p>
   <strong>Start time:</strong>
-  <%= @meeting.start_time %>
+  <%= @meeting.start_time.hour %>:<%= @meeting.start_time.min %>hrs
 </p>
 
 <p>
