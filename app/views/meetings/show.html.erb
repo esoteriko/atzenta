@@ -17,7 +17,7 @@
 
 <p>
   <strong>Schedule date:</strong>
-  <%= @meeting.schedule_date.year %>|<%= @meeting.schedule_date.month %>|<%= @meeting.schedule_date.day %>
+  <%= @meeting.schedule_date%>
 </p>
 
 <p>
@@ -36,7 +36,7 @@
 </p>
 
 <p>
-  <strong>Start time:</strong>
+  <strong>follow_ups</strong>
   <% if @meeting.follow_ups.any? %>  
     <% @meeting.follow_ups.each do |result|%>
       <%= link_to result, result%>

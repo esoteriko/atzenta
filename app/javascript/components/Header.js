@@ -5,13 +5,10 @@ import PropTypes from "prop-types";
 class Header extends React.Component{
     constructor(props){
         super(props);
-		}
-		
-		
+		}				
     render(){ 
 			let salir,edit,registrar,iniciar_sesion;			
-			if(this.props.user_signed_in){
-				
+			if(this.props.user_signed_in){				
 				salir = <a data-method="delete" href={this.props.url + "/sign_out"}>Salir</a>
 				edit = <a href={this.props.url + "/edit"}>Editar</a>
 			}

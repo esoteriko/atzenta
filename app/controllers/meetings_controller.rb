@@ -1,6 +1,6 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, excep: [:index]
 
   def index
     @meetings = Meeting.order(schedule_date: :desc)
@@ -22,6 +22,7 @@ class MeetingsController < ApplicationController
   # POST /meetings  
   def create
     @meeting = Meeting.new(meeting_params)
+    @meeting.user_id =  current_user.id
 
     respond_to do |format|
       if @meeting.save
@@ -63,6 +64,6 @@ class MeetingsController < ApplicationController
     end
     
     def meeting_params
-      params.require(:meeting).permit(:title, :body, :schedule_date, :purpose, :duration, :start_time, follow_ups_attributes: [:id, :body, :date])
+      params.require(:meeting).permit(:user_id, :title, :body, :schedule_date, :purpose, :duration, :start_time, follow_ups_attributes: [:id, :body, :date])
     end
 end

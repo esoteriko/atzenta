@@ -1,9 +1,15 @@
 <%= form_with(model: @meeting, local: true) do |form|%>
-  <%=react_component("FormMeeting", {meeting: @meeting})%>
-  <%= form.fields_for :follows_ups do |form|%>
-    <%= form.text_field :body%>
-    <%= form.date_select :date %>
-  <%end%>
+    <%= form.text_field :title, placeholder: "Titulo"%>
+    <%= form.text_field :body %>
+    <%=form.date_field :schedule_date %>
+    <%=form.text_field :purpose, placeholder: "proposito de la junta"%>
+    <%= form.number_field :duration, placeholder: "duracion"%>
+    <%=form.time_field :start_time%>
+
+  <%= form.fields_for (:follow_ups) do |f|%>
+    <%=f.text_field :body%>
+    <%= f.date_field :date%>  
+  <%end%>  
   <%=form.submit "save"%>  
 <%end%>
 

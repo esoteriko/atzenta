@@ -1,3 +1,6 @@
 
-<%=react_component("Index", {meeting: @meetings })%>
+<%=react_component("Index", {meeting: @meetings})%>
 
+<td><%= link_to 'Show', meeting, class:"customLink" %></td>
+        <td><%= link_to 'Edit', edit_meeting_path(objective), class:"customLink" %></td>
+        <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' }, class:"customLink" %></td>

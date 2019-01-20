@@ -1,6 +1,7 @@
 <%= form_with(model: @follow_up, local: true) do |form|%>      
-	<%= react_component("FormFollow", {follow_up: @follow_up})%> 
+	<%=form.text_field :body%>
+  <%= form.date_field :date%>  
 	<%= form.text_field :meeting_id %>   
-      <%= form.submit %>    
+  <%= form.submit %>    
   <% end %>
 <%= link_to 'Back', follow_ups_path %>

@@ -4,9 +4,9 @@ class FormFollow extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            body: this.props.follow_up.body,
-						date: this.props.follow_up.date,
-						meeting_id: this.props.follow_up.meeting_id					
+            body: "",
+						date: "",
+						meeting_id: ""					
 			};				
       this.methodB = this.methodB.bind(this)        			
 			this.methodD = this.methodD.bind(this)
@@ -25,8 +25,9 @@ class FormFollow extends React.Component {
     render(){
         return(				
 				<div>					          					
-					<input type="text" name="follow_up[body]" value={this.state.body} onChange={this.methodB}/>
-					<input type="date" name="follow_up[date]" value={this.state.date} onChange={this.methodD}/> 										          										
+					<input type="text" name="meeting[follows_ups][body]" value={this.state.body} onChange={this.methodB}/>
+					<input type="date" name="meeting[follows_ups][date]" value={this.state.date} onChange={this.methodD}/> 										          															
+					
         </div>        
         );
     }

@@ -2,6 +2,6 @@ class FollowUp < ApplicationRecord
   belongs_to :meeting
   
   def to_s
-    body
+    "{body}"
   end
 end

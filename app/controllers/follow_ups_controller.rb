@@ -14,7 +14,7 @@ class FollowUpsController < ApplicationController
 
   # GET /follow_ups/new
   def new
-    @follow_up = FollowUp.new
+    @follow_up = FollowUp.new 
   end
 
   # GET /follow_ups/1/edit
@@ -69,6 +69,6 @@ class FollowUpsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def follow_up_params
-      params.require(:follow_up).permit(:body, :date)
+      params.require(:follow_up).permit(:body, :date, :meeting_id)
     end
 end
