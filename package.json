@@ -5,6 +5,7 @@
     "@rails/webpacker": "3.5",
     "babel-preset-react": "^6.24.1",
     "moment": "^2.23.0",
+    "moment-timezone": "^0.5.23",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-datetime": "^2.16.3",

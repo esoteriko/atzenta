@@ -1,50 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @meeting.title %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @meeting.user.email %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @meeting.body %>
-</p>
-
-<p>
-  <strong>Schedule date:</strong>
-  <%= @meeting.schedule_date%>
-</p>
-
-<p>
-  <strong>Purpose:</strong>
-  <%= @meeting.purpose %>
-</p>
-
-<p>
-  <strong>Duration:</strong>
-  <%= @meeting.duration %>
-</p>
-
-<p>
-  <strong>Start time:</strong>
-  <%= @meeting.start_time.hour %>:<%= @meeting.start_time.min %>hrs
-</p>
-
-<p>
-  <strong>follow_ups</strong>
-  <% if @meeting.follow_ups.any? %>  
-    <% @meeting.follow_ups.each do |result|%>
-      <%= link_to result, result%>
-      <%end%>
-      <%else%>
-      <p>RIP</p>
+<%=react_component("ShowM", {
+  meeting: @meeting,
+  follow_ups: @meeting.follow_ups,
+  follow_ups_any: @meeting.follow_ups.any?,
+  url: "/meetings"
+  })%>
+  <%= form_for([@meeting, @follow_up]) do |f|%>
+    <p><%= f.text_field :body%></p>
+    <p><%= f.date_field :date%></p>
+    <%=f.submit%>
     <%end%>
-</p>
-
 <%= link_to 'Edit', edit_meeting_path(@meeting) %> |
 <%= link_to 'Back', meetings_path %>

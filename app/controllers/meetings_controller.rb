@@ -1,12 +1,13 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, excep: [:index]
+  before_action :authenticate_user!, except: [:index]
 
   def index
     @meetings = Meeting.order(schedule_date: :desc)
   end
   
   def show
+    @follow_up = FollowUp.new
   end
 
   # GET /meetings/new

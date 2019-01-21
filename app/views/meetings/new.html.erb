@@ -1,14 +1,14 @@
 <%= form_with(model: @meeting, local: true) do |form|%>
-    <%= form.text_field :title, placeholder: "Titulo"%>
-    <%= form.text_field :body %>
-    <%=form.date_field :schedule_date %>
-    <%=form.text_field :purpose, placeholder: "proposito de la junta"%>
-    <%= form.number_field :duration, placeholder: "duracion"%>
-    <%=form.time_field :start_time%>
+    <p><%= form.text_field :title, placeholder: "Titulo"%></p>
+    <p><%= form.text_field :body %></p>
+    <p><%=form.date_field :schedule_date %></p>
+    <p><%=form.text_field :purpose, placeholder: "proposito de la junta"%></p>
+    <p><%= form.number_field :duration, placeholder: "duracion"%></p>
+    <p><%=form.time_field :start_time%></p>
 
   <%= form.fields_for (:follow_ups) do |f|%>
-    <%=f.text_field :body%>
-    <%= f.date_field :date%>  
+    <p><%=f.text_field :body%></p>
+    <p><%= f.date_field :date%></p>
   <%end%>  
   <%=form.submit "save"%>  
 <%end%>

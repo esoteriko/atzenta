@@ -1,5 +1,6 @@
 class FollowUpsController < ApplicationController
   before_action :set_follow_up, only: [:show, :edit, :update, :destroy]
+  before_action :set_meeting
   before_action :authenticate_user!
   # GET /follow_ups
   # GET /follow_ups.json
@@ -25,10 +26,11 @@ class FollowUpsController < ApplicationController
   # POST /follow_ups.json
   def create
     @follow_up = FollowUp.new(follow_up_params)
+    @follow_up.meeting = @meeting
 
     respond_to do |format|
       if @follow_up.save
-        format.html { redirect_to @follow_up, notice: 'Follow up was successfully created.' }
+        format.html { redirect_to @follow_up.meeting, notice: 'Follow up was successfully created.' }
         format.json { render :show, status: :created, location: @follow_up }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class FollowUpsController < ApplicationController
   def update
     respond_to do |format|
       if @follow_up.update(follow_up_params)
-        format.html { redirect_to @follow_up, notice: 'Follow up was successfully updated.' }
+        format.html { redirect_to @follow_up.meeting, notice: 'Follow up was successfully updated.' }
         format.json { render :show, status: :ok, location: @follow_up }
       else
         format.html { render :edit }
@@ -56,12 +58,16 @@ class FollowUpsController < ApplicationController
   def destroy
     @follow_up.destroy
     respond_to do |format|
-      format.html { redirect_to follow_ups_url, notice: 'Follow up was successfully destroyed.' }
+      format.html { redirect_to @meeting, notice: 'Follow up was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
+
+  def set_meeting
+    @meeting = Meeting.find(params[:meeting_id])
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_follow_up
       @follow_up = FollowUp.find(params[:id])
